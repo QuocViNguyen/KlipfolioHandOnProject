@@ -1,0 +1,7 @@
+.service-div{
+    transition: all 0.5s;
+}
+
+.service-div:hover {
+    box-shadow: 0 0 30px rgba(33,33,33,.2); 
+  }
