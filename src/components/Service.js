@@ -8,23 +8,27 @@ function Service(props) {
     var selectHighLightColor = "bg-gray-400";
     const dispatch = useDispatch();
 
-
     const onClickHandle = (event) => {
-
-        dispatch(selectService({name: props.name, API: props.API, logo: props.logo}));
+        //Remove highlight of previously selected service
+        var allServices = Array.from(document.getElementsByClassName('serv-img'));
+        allServices.forEach(element => {
+            element.classList.remove(selectHighLightColor);
+        });
+        
         var serviceImg = document.getElementById(props.id).getElementsByTagName('img')[0];
         if (serviceImg.classList.contains(selectHighLightColor)){
             serviceImg.classList.remove(selectHighLightColor);
         }else{
             serviceImg.classList.add(selectHighLightColor);    
         }
+        dispatch(selectService({name: props.name, API: props.API, logo: props.logo}));
     }
 
     return (
         <div id={props.id} className="service-div transform hover:scale-110 hover:-translate-y-3 transition ease-in-out" >
             <p>{props.name}</p>
             <br/>
-            <img src={props.logo} className="w-20 h-auto filter drop-shadow-lg" onClick={onClickHandle}/>
+            <img src={props.logo} className="serv-img w-20 h-auto filter drop-shadow-lg" onClick={onClickHandle}/>
         </div>
     );
 }

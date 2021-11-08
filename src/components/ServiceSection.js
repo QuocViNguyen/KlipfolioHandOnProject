@@ -1,8 +1,5 @@
 import Grid from '@mui/material/Grid';
-import Tabs from '@mui/material/Tabs';
-import Service from './Service';
 import React, { useState } from 'react';
-import Tab from '@mui/material/Tab';
 import ServiceList from './ServiceList';
 import facebook from '../media/facebook.png';
 import dropbox from '../media/dropbox.png';
@@ -12,6 +9,7 @@ import slack from '../media/slack.png';
 
 function ServiceSection() {
     const [value, setValue] = React.useState(0);
+    
     const handleChange = (event, newValue) => {
         setValue(newValue);
         console.log(value);
