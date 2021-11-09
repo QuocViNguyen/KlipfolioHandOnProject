@@ -23,21 +23,21 @@ function ServiceSection() {
                 <Grid item xs={12} md={12} className='text-center'>
                     <ServiceList
                         list={[
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
+                            {name:"facebook", API:"HAHAH", logo: facebook},
                             {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
+                            {name:"google drive", API:"HAHAH", logo: googledrive},
                             {name:"slack", API:"HAHAH", logo:slack},
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
+                            {name:"facebook", API:"HAHAH", logo: facebook},
                             {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
+                            {name:"google drive", API:"HAHAH", logo: googledrive},
                             {name:"slack", API:"HAHAH", logo:slack},
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
+                            {name:"facebook", API:"HAHAH", logo: facebook},
                             {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
+                            {name:"google drive", API:"HAHAH", logo: googledrive},
                             {name:"slack", API:"HAHAH", logo:slack},
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
+                            {name:"facebook", API:"HAHAH", logo: facebook},
                             {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
+                            {name:"google drive", API:"HAHAH", logo: googledrive},
                             {name:"slack", API:"HAHAH", logo:slack}
                         ]}
                     />
