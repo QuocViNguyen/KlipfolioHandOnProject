@@ -17,7 +17,7 @@ function App() {
       <MyHeader/>
       <br/>
       <ServiceSection/>
-      <br/><br/><br/><br/>
+      <br/><br/><br/>
       <DataSourceSection/>
     </div>
   );

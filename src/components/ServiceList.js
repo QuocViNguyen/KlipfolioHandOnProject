@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Service from './Service';
 
 function ServiceList(props) {
-    const [list, setList] = React.useState([]);
+    const [list, setList] = useState([]);
 
     useEffect(() => {
         setList(props.list);

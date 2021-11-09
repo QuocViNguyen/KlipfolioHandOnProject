@@ -1,8 +1,7 @@
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
 import DataSourceList from './DataSourceList';
-
-
+import Button from '@mui/material/Button';
 
 function DataSourceSection() {
     const [value, setValue] = React.useState(0);
@@ -21,6 +20,11 @@ function DataSourceSection() {
                     {
                     <DataSourceList/>
                     }
+                </Grid>
+                <Grid item xs={12} md={12}><br/></Grid>
+                <Grid item xs={12} md={10}/>
+                <Grid item xs={12} md={2} className='text-center'>
+                    <Button variant="outlined">More Data Sources</Button>
                 </Grid>
             </Grid>
         </div>
