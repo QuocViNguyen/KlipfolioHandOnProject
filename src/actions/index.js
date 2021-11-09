@@ -5,3 +5,10 @@ export const selectService = (service) => {
         selectedService: service
     }
 }
+
+export const loadDataSource = (data) => {
+    return {
+        type: "LOAD_DATASOURCE",
+        dataSource: data
+    }
+}

@@ -1,14 +1,14 @@
 import Grid from '@mui/material/Grid';
-import React, { useState } from 'react';
+import { React, useState } from 'react';
 import ServiceList from './ServiceList';
 import facebook from '../media/facebook.png';
 import dropbox from '../media/dropbox.png';
 import googledrive from '../media/googledrive.png';
 import slack from '../media/slack.png';
-
+import Button from '@mui/material/Button';
 
 function ServiceSection() {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
     
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -23,24 +23,29 @@ function ServiceSection() {
                 <Grid item xs={12} md={12} className='text-center'>
                     <ServiceList
                         list={[
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
-                            {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
-                            {name:"slack", API:"HAHAH", logo:slack},
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
-                            {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
-                            {name:"slack", API:"HAHAH", logo:slack},
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
-                            {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
-                            {name:"slack", API:"HAHAH", logo:slack},
-                            {name:"Facebook", API:"HAHAH", logo: facebook},
-                            {name:"dropbox", API:"HAHAH", logo: dropbox},
-                            {name:"googledrive", API:"HAHAH", logo: googledrive},
-                            {name:"slack", API:"HAHAH", logo:slack}
+                            {name:"facebook", API:"Place Holder API", logo: facebook},
+                            {name:"dropbox", API:"Place Holder API", logo: dropbox},
+                            {name:"google drive", API:"Place Holder API", logo: googledrive},
+                            {name:"slack", API:"Place Holder API", logo:slack},
+                            {name:"facebook", API:"Place Holder API", logo: facebook},
+                            {name:"dropbox", API:"Place Holder API", logo: dropbox},
+                            {name:"google drive", API:"Place Holder API", logo: googledrive},
+                            {name:"slack", API:"Place Holder API", logo:slack},
+                            {name:"facebook", API:"Place Holder API", logo: facebook},
+                            {name:"dropbox", API:"Place Holder API", logo: dropbox},
+                            {name:"google drive", API:"Place Holder API", logo: googledrive},
+                            {name:"slack", API:"Place Holder API", logo:slack},
+                            {name:"facebook", API:"Place Holder API", logo: facebook},
+                            {name:"dropbox", API:"Place Holder API", logo: dropbox},
+                            {name:"google drive", API:"Place Holder API", logo: googledrive},
+                            {name:"slack", API:"Place Holder API", logo:slack}
                         ]}
                     />
+                </Grid>
+                <Grid item xs={12} md={12}><br/></Grid>
+                <Grid item xs={12} md={10}/>
+                <Grid item xs={12} md={2} className='text-center'>
+                    <Button variant="outlined">More Services</Button>
                 </Grid>
             </Grid>
         </div>
