@@ -55,7 +55,6 @@ function Service(props) {
                 <br />
                 <img src={props.logo} className="serv-img w-20 h-auto filter drop-shadow-lg" onClick={onClickHandle} />
             </div>
-
             <div>
                 <Modal
                     open={open}

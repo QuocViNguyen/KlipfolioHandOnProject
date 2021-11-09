@@ -34,7 +34,6 @@ function DataSourceList(props) {
 
 export default DataSourceList;
 
-
 function CreateSkeletonList(size){
     var SkeletonList = [];
 
@@ -64,6 +63,5 @@ function RenderDataSourceList(list, size){
             </Skeleton>
         );
     }
-
     return SourceList;
 }
