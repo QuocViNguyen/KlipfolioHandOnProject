@@ -10,7 +10,7 @@ import MetricSection from './components/MetricSection';
 function App() {
 
   useEffect(() => {
-    console.log("NEW SERVICE SELECTED")
+    // console.log("NEW SERVICE SELECTED")
   }, [useSelector(state => state.selectedService)]);
 
   return (

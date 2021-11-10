@@ -9,7 +9,7 @@ function ServiceList(props) {
     }, []);
 
     return ( 
-        <div className="flex space-x-8 px-auto mx-12">
+        <div className="flex space-x-8 px-auto mx-8">
             { 
                 list.map((item, key) => {
                     return <Service name={item.name} API={item.API} logo={item.logo} id={"service-" + key} list={list}/>

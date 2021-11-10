@@ -18,9 +18,12 @@ function Service(props) {
     const fetchDataSource = (serviceName) => {
         setOpen(true);
         var params = { serviceName: serviceName.toLowerCase() };
+
         axios.get('http://localhost:4000/getDataSources', { params }).then(response => {
-            dispatch(loadDataSource(response.data));
-            setOpen(false);
+            setTimeout(() => {
+                setOpen(false);
+                dispatch(loadDataSource(response.data));
+              }, 1000);
         }).catch(error => {
             setOpen(false);
             alert("Error loading Data Sources for " + serviceName + " service!");
@@ -43,10 +46,10 @@ function Service(props) {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '5%',
+        width: 400,
         boxShadow: 24,
         p: 4,
-    };
+      };
 
     return (
         <div id={props.id} className="service-div transform hover:scale-110 hover:-translate-y-3 transition ease-in-out" >
@@ -62,8 +65,8 @@ function Service(props) {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    <Box sx={modalStyle} className='flex-col items-center	'>
-                        <CircularProgress />
+                    <Box sx={modalStyle} className='bg-transparent focus:outline-none'>
+                        <iframe src="https://giphy.com/embed/qvzuaIqxv4qrlyAfKo" width="250" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                     </Box>
                 </Modal>
             </div>

@@ -8,9 +8,8 @@ function DataSourceList(props) {
     const [list, setList] = React.useState(Array.from(Array(props.size).fill(0)));
 
     useEffect(() => {
-        console.log(list);
+        // console.log(list);
     }, [list]);
-
 
     const unsubscribe = Store.subscribe(()=> {
         setList(Store.getState().dataSource);
@@ -18,7 +17,7 @@ function DataSourceList(props) {
     })
 
     return ( 
-        <div className="flex space-x-8 px-auto mx-12">
+        <div className="flex space-x-8 px-auto mx-8">
             { 
                 list[0] ? 
                 (
