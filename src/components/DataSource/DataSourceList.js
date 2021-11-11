@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import DataSource from './DataSource';
+import DataSource from './DataSource.js';
 import Skeleton from "@mui/material/Skeleton";
-import Store from '../Store';
+import Store from '../../Store';
 
 
 function DataSourceList(props) {
     const [list, setList] = React.useState(Array.from(Array(props.size).fill(0)));
 
     useEffect(() => {
-        // console.log(list);
     }, [list]);
 
     const unsubscribe = Store.subscribe(()=> {
         setList(Store.getState().dataSource);
-        // console.log(Store.getState().dataSource);
     })
 
     return ( 

@@ -1,10 +1,10 @@
 import Grid from '@mui/material/Grid';
 import { React, useState } from 'react';
 import ServiceList from './ServiceList';
-import facebook from '../media/facebook.png';
-import dropbox from '../media/dropbox.png';
-import googledrive from '../media/googledrive.png';
-import slack from '../media/slack.png';
+import facebook from '../../media/facebook.png';
+import dropbox from '../../media/dropbox.png';
+import googledrive from '../../media/googledrive.png';
+import slack from '../../media/slack.png';
 import Button from '@mui/material/Button';
 
 function ServiceSection() {

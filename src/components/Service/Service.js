@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { selectService, loadDataSource } from '../actions';
-import Store from '../Store';
+import { selectService, loadDataSource } from '../../actions';
+import Store from '../../Store';
 import axios from 'axios';
-import CircularProgress from '@mui/material/CircularProgress';
 import Modal from '@mui/material/Modal';
 import { useToggle } from "rooks";
 import { Box } from '@material-ui/core';
@@ -37,10 +36,6 @@ function Service(props) {
         dispatch(selectService({ name: props.name, API: props.API, logo: props.logo }));
     }
 
-    const toggle = () => {
-        setOpen(!open);
-    }
-
     const modalStyle = {
         position: 'absolute',
         top: '50%',
@@ -54,7 +49,7 @@ function Service(props) {
     return (
         <div id={props.id} className="service-div transform hover:scale-110 hover:-translate-y-3 transition ease-in-out" >
             <div>
-                <p>{props.name}</p>
+                <p className='text-large font-medium'>{props.name}</p>
                 <br />
                 <img src={props.logo} className="serv-img w-20 h-auto filter drop-shadow-lg" onClick={onClickHandle} />
             </div>
@@ -75,7 +70,6 @@ function Service(props) {
 }
 
 const unsubscribe = Store.subscribe(() => {
-    // console.log("ASDASD");
 })
 
 export default Service;

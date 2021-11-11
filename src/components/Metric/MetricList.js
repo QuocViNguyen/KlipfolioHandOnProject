@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import DataSource from './DataSource';
+import DataSource from '../DataSource/DataSource.js';
 import Skeleton from "@mui/material/Skeleton";
-import Store from '../Store'; 
+import Store from '../../Store'; 
 import Metric from './Metric';
 
 
@@ -9,20 +9,19 @@ function MetricList(props) {
     const [list, setList] = useState([]);
 
     const convertMetricData = (myDataSources) => {
-
         const temp = [];
-        Object.assign(temp, []);        
+        Object.assign(temp, []);
         myDataSources.forEach(myDataSource => {
             myDataSource.metrics.forEach(myMetric => {
-                temp[myMetric] = myDataSource.data;    
-                
+                myDataSource.data['type'] = myMetric;
+                myDataSource.data['title'] = myDataSource.title;
+                temp[myMetric] = myDataSource.data;  
             })
         })
         setList(temp);
     }
 
     useEffect(() => {
-        console.log(list);
     }, [list]);
 
     const unsubscribe = Store.subscribe(()=> {
@@ -42,25 +41,12 @@ function MetricList(props) {
 
 export default MetricList;
 
-function CreateSkeletonList(size){
-    console.log("SKELETON")
-    var SkeletonList = [];
-    for (let index = 0; index < size; index++) {
-        SkeletonList.push(
-            <Skeleton variant="rectangular">
-                <Metric/>
-            </Skeleton>
-        );
-    }
-    return SkeletonList;
-}
-
 function RenderMetricList(list, size){
     var MetricList = [];
 
     for (var key in list) {
         MetricList.push(
-            <Metric  title={key}/>
+            <Metric type={key} title={list[key]['title']} data={list[key]}/>
         );
     }
 

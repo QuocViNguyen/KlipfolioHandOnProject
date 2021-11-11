@@ -1,16 +1,13 @@
 import './App.css';
 import MyHeader from './components/MyHeader';
-import ServiceSection from './components/ServiceSection';
-import { useState, useEffect } from 'react';
+import ServiceSection from './components/Service/ServiceSection';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import DataSourceSection from './components/DataSourceSection';
-import DataSource from './components/DataSource';
-import MetricSection from './components/MetricSection';
-
+import DataSourceSection from './components/DataSource/DataSourceSection.js';
+import MetricSection from './components/Metric/MetricSection';
 function App() {
 
   useEffect(() => {
-    // console.log("NEW SERVICE SELECTED")
   }, [useSelector(state => state.selectedService)]);
 
   return (

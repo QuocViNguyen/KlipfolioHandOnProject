@@ -1,6 +1,6 @@
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
-import DataSourceList from './DataSourceList';
+import DataSourceList from './DataSourceList.js';
 import Button from '@mui/material/Button';
 
 function DataSourceSection() {
