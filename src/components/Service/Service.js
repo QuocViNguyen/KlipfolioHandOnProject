@@ -29,7 +29,6 @@ function Service(props) {
     }
 
     const onClickHandle = (event) => {
-        //Remove highlight of previously selected service
         SelectedHighlightHandler(selectHighLightColor, props);
         fetchDataSource(props.name);
         dispatch(selectService({ name: props.name, API: props.API, logo: props.logo }));

@@ -4,6 +4,7 @@ import Modal from '@mui/material/Modal';
 import { useToggle } from "rooks";
 import BarChart from '../Chart';
 import Backdrop from '@mui/material/Backdrop';
+import visualization from '../../media/visualization.png'
 
 function Metric(props) {
     const [open, setOpen] = useToggle();
@@ -25,10 +26,11 @@ function Metric(props) {
     };
 
     return (
-        <div className='w-60 h-36 bg-gray-50 transform hover:scale-110 hover:-translate-y-3 transition ease-in-out' onClick={toggle}>
-            <Box className='text-large font-medium'>
-            {props.title}
+        <div className='w-60 h-40 bg-gray-50 transform hover:scale-110 hover:-translate-y-3 transition ease-in-out text-large font-medium' onClick={toggle}>
+            <Box className='h-10 '>
+                {props.title}
             </Box>
+            <img alt='metric' src={visualization} className="object-bottom"/>
 
             <div>
                 <Modal
