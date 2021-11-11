@@ -7,7 +7,7 @@ function MetricSection() {
 
     return (
         <div className=''>
-            <p className='text-xl font-semibold'>Recommended Metrics</p>
+            <p className='pl-4 text-xl font-semibold'>Recommended Metrics</p>
             <br/>
             <Grid container rowSpacing={0.3} columnSpacing={0.3}>
                 <Grid item xs={12} md={12} className='text-center'>

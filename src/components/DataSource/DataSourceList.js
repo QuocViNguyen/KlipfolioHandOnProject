@@ -55,9 +55,12 @@ function RenderDataSourceList(list, size){
 
     for (let index = 0; index < (size - list.length); index++) {
         SourceList.push(
-            <Skeleton variant="rectangular">
-                <DataSource />
-            </Skeleton>
+            <div>
+                <Skeleton variant="rectangular">
+                    <DataSource />
+                </Skeleton>
+            </div>
+
         );
     }
     return SourceList;

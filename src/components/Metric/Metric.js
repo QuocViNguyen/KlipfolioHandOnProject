@@ -26,11 +26,13 @@ function Metric(props) {
     };
 
     return (
-        <div className='w-60 h-40 bg-gray-50 transform hover:scale-110 hover:-translate-y-3 transition ease-in-out text-large font-medium' onClick={toggle}>
-            <Box className='h-10 '>
+        <div className='w-60 h-40 bg-gray-50 transform hover:scale-110 hover:-translate-y-3 transition ease-in-out' onClick={toggle}>
+            <Box className='sm:h-20 h-10 text-sm md:text-lg font-medium'>
                 {props.title}
             </Box>
-            <img alt='metric' src={visualization} className="object-bottom"/>
+            <Box className='absolute bottom-0'>
+                <img alt='metric' src={visualization} className="object-bottom"/>
+            </Box>
 
             <div>
                 <Modal
