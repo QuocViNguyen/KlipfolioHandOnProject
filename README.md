@@ -3,7 +3,7 @@
 ## Description
 This project implements a Gallery page to showcase different assets Klipfolio customers can access such as Services, Data Sources and Metrics. Here is what it should look like:
 
-![alt text](src\media\screenshot.png)
+![alt text](https://github.com/QuocViNguyen/KlipfolioHandOnProject/blob/main/src/media/screenshot.png)
 
 
 
