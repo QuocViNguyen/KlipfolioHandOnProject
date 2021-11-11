@@ -1,6 +1,6 @@
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
-import DataSourceList from './DataSourceList';
+import DataSourceList from './DataSourceList.js';
 import Button from '@mui/material/Button';
 
 function DataSourceSection() {
@@ -13,7 +13,7 @@ function DataSourceSection() {
 
     return (
         <div className=''>
-            <p className=''>Existing Data Source</p>
+            <p className='text-xl font-semibold'>Existing Data Source</p>
             <br/>
             <Grid container rowSpacing={0.3} columnSpacing={0.3}>
                 <Grid item xs={12} md={12} className='text-center'>

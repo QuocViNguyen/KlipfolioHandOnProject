@@ -1,10 +1,10 @@
 import Grid from '@mui/material/Grid';
 import { React, useState } from 'react';
 import ServiceList from './ServiceList';
-import facebook from '../media/facebook.png';
-import dropbox from '../media/dropbox.png';
-import googledrive from '../media/googledrive.png';
-import slack from '../media/slack.png';
+import facebook from '../../media/facebook.png';
+import dropbox from '../../media/dropbox.png';
+import googledrive from '../../media/googledrive.png';
+import slack from '../../media/slack.png';
 import Button from '@mui/material/Button';
 
 function ServiceSection() {
@@ -17,7 +17,7 @@ function ServiceSection() {
 
     return (
         <div className=''>
-            <p className=''>Recommended services</p>
+            <p className='text-xl font-semibold'>Recommended services</p>
             <br/>
             <Grid container rowSpacing={0.3} columnSpacing={0.3}>
                 <Grid item xs={12} md={12} className='text-center'>
