@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, InputAdornment } from '@material-ui/core';
+import { Button, InputAdornment } from '@material-ui/core';
 import Grid from '@mui/material/Grid';
 import logo from '../media/klipfolio-logo.png';
 import TextField from '@mui/material/TextField';
@@ -11,13 +11,12 @@ function MyHeader() {
         <div className='bg-white py-4'>
             <Grid container rowSpacing={0.3} columnSpacing={0.3}>
                 <Grid item xs={12} md={4} className='text-center'>
-                    <img src={logo} className='p-0' alt="logo" className="w-40 h-auto" />
+                    <img src={logo} alt="logo" className="p-0 w-40 h-auto"/>
                 </Grid>
                 <Grid item xs={12} md={4} className='text-center'>
                     {SearchBar(searchTerm, setSearchTerm)}
                 </Grid>
                 <Grid item xs={4} md={4} className='text-center'>
-                    {/* Empty */}
                 </Grid>
             </Grid>
         </div>

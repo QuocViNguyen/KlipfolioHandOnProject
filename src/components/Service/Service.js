@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { React } from 'react';
 import { useDispatch } from 'react-redux';
 import { selectService, loadDataSource } from '../../actions';
 import Store from '../../Store';
@@ -8,7 +8,6 @@ import { useToggle } from "rooks";
 import { Box } from '@material-ui/core';
 
 function Service(props) {
-    const [searchTerm, setSearchTerm] = useState("");
     const [open, setOpen] = useToggle(false);
 
     var selectHighLightColor = "bg-gray-400";
@@ -51,7 +50,7 @@ function Service(props) {
             <div>
                 <p className='text-large font-medium'>{props.name}</p>
                 <br />
-                <img src={props.logo} className="serv-img w-20 h-auto filter drop-shadow-lg" onClick={onClickHandle} />
+                <img alt='service' src={props.logo} className="serv-img w-20 h-auto filter drop-shadow-lg" onClick={onClickHandle} />
             </div>
             <div>
                 <Modal
@@ -61,7 +60,7 @@ function Service(props) {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={modalStyle} className='bg-transparent focus:outline-none'>
-                        <iframe src="https://giphy.com/embed/qvzuaIqxv4qrlyAfKo" width="250" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <iframe title="loading gif" src="https://giphy.com/embed/qvzuaIqxv4qrlyAfKo" width="250" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                     </Box>
                 </Modal>
             </div>
@@ -69,7 +68,7 @@ function Service(props) {
     );
 }
 
-const unsubscribe = Store.subscribe(() => {
+Store.subscribe(() => {
 })
 
 export default Service;

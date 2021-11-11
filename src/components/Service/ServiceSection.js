@@ -1,5 +1,5 @@
 import Grid from '@mui/material/Grid';
-import { React, useState } from 'react';
+import { React } from 'react';
 import ServiceList from './ServiceList';
 import facebook from '../../media/facebook.png';
 import dropbox from '../../media/dropbox.png';
@@ -8,13 +8,6 @@ import slack from '../../media/slack.png';
 import Button from '@mui/material/Button';
 
 function ServiceSection() {
-    const [value, setValue] = useState(0);
-    
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-        console.log(value);
-    };
-
     return (
         <div className=''>
             <p className='text-xl font-semibold'>Recommended services</p>

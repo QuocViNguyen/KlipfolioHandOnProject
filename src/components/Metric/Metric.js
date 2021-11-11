@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { React } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useToggle } from "rooks";
@@ -6,12 +6,7 @@ import BarChart from '../Chart';
 import Backdrop from '@mui/material/Backdrop';
 
 function Metric(props) {
-    const [data, setData] = useState(false);
     const [open, setOpen] = useToggle();
-
-    const onClickHandle = (event) => {
-        // setOpen(true);
-    }
 
     const toggle = () => {
         setOpen(!open);

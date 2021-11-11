@@ -1,15 +1,9 @@
 import Grid from '@mui/material/Grid';
-import React, { useState } from 'react';
+import { React } from 'react';
 import MetricList from './MetricList';
 import Button from '@mui/material/Button';
 
 function MetricSection() {
-    const [value, setValue] = React.useState(0);
-    
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-        console.log(value);
-    };
 
     return (
         <div className=''>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bar, Pie, defaults, Line } from 'react-chartjs-2';
+import { Bar, Pie, Line } from 'react-chartjs-2';
 import { bgColors, borderColors } from '../Colors';
 
 const Chart = (props) => {
@@ -11,7 +11,6 @@ const Chart = (props) => {
         myLabels.push(element.date);
         myDatas.push(element.access);
     });
-
 
     function RenderChart(type) {
         switch (type) {

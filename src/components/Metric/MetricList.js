@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import DataSource from '../DataSource/DataSource.js';
 import Skeleton from "@mui/material/Skeleton";
 import Store from '../../Store'; 
 import Metric from './Metric';
@@ -24,7 +23,7 @@ function MetricList(props) {
     useEffect(() => {
     }, [list]);
 
-    const unsubscribe = Store.subscribe(()=> {
+    Store.subscribe(()=> {
         if (Object.keys(Store.getState().dataSource).length !== 0){
             convertMetricData(Store.getState().dataSource);
         }

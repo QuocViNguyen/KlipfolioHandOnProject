@@ -5,12 +5,12 @@ import Store from '../../Store';
 
 
 function DataSourceList(props) {
-    const [list, setList] = React.useState(Array.from(Array(props.size).fill(0)));
+    const [list, setList] = useState(Array.from(Array(props.size).fill(0)));
 
     useEffect(() => {
     }, [list]);
 
-    const unsubscribe = Store.subscribe(()=> {
+    Store.subscribe(()=> {
         setList(Store.getState().dataSource);
     })
 
