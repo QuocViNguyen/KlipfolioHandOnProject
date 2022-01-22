@@ -7,9 +7,6 @@ import Store from '../../Store';
 function DataSourceList(props) {
     const [list, setList] = useState(Array.from(Array(props.size).fill(0)));
 
-    useEffect(() => {
-    }, [list]);
-
     Store.subscribe(()=> {
         setList(Store.getState().dataSource);
     })
@@ -60,7 +57,6 @@ function RenderDataSourceList(list, size){
                     <DataSource />
                 </Skeleton>
             </div>
-
         );
     }
     return SourceList;

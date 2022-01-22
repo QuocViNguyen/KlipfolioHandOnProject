@@ -1,5 +1,3 @@
-
-
 export const bgColors = [
     'rgba(255, 0, 0, 0.4)',
     'rgba(255, 128, 0, 0.4)',
